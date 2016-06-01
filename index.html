@@ -3,86 +3,442 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
+	<script src="https://use.fontawesome.com/ee9eae3518.js"></script>
+
+	<script src="js/validator.min.js"></script>
+	<script src="js/modernizr-custom.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="js/bootstrap.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<title>Tomas Baena</title>
 </head>
-<body>
-	<img class="airplane" src="img/welcome.png">
-	<div class="row row1">
-	  <img class="col-xs-12 mountains" src="img/mountains.png">
-	  <img class="wave1" src="img/wave2.png">		
-	  <img class="wave2" src="img/wave1.png">
-	</div>
-	  <h1 class="header-style">Projects</h1>
-	<div class="row row2">
-	 	<img class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-1 col-md-3" src="img/lumakiLogo.png">
-		<p class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1">Lumaki is a company I launched in November of 2015. Under the Lumaki name I offer services in web design, mobile app development and graphic design. Along with these services I'm also currently working on a mobile app called coupz(more info below)
-		</p>
-		<a type="button" class="btn wire-btn" href="http://www.lumaki.co" target="_blank">Check out Lumaki</a>
-	<hr class="hr">
-	</div>
-	<div class="row row3">
-	 	<img class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-1 col-md-3 coupzImg" src="img/coupzlogo.png">
-		<p class="col-xs-10 col-xs-offset-1 col-sm-offset-1 col-sm-4">Paper coupons found in the mail are wasteful, often not present when needed and very expensive. Coupz is a mobile application with the aim to solve all of these problems. (Coming Soon)
-		</p><img class="col-xs-6 col-xs-offset-3 col-sm-offset-0 col-sm-2 col-md-2" src="img/coupz-screen.png">
-	</div>
-	<hr class="hr">
-	<div class="row row3">
-	 	<h1 class="col-xs-8 col-xs-offset-2">Freelance</h1>
-		<p class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1">I created the landing page for an environmental migration conference held by Wilfrid Laurier University in partnership with the US Embassy, Balsillie School of International Affairs and the International Migration Research Centre.<br><a type="button" class="btn wire-btn" href="http://www.laurierenvironmentalmigration.com" target="_blank">Check it out!</a>
-		</p>
-		<p class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1">This is a sticker I designed for the restaurant Frites in Waterloo, Ontario. It was used mostly in a social media contest advertising campain.<br>
-		<img src="img/sticker-frites.png">
-		</p>
-		<p class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1">This is an image of a logo I made for a rice ditribution company and the logo on their bag.<br>
-		<img style="width:300px;" src="img/rice_logo.png"><br>
-		<img style="width:300px;" src="img/rice_bag.jpg">
-		</p>
+<!-- Modal Lumaki -->
+<div class="modal modal-fullscreen fade" id="modal-lumaki" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="center-align">Start Up • Lumaki</h2>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 center-align">
+        		<img class="modal-image" src="img/lumaki-screen.png">
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12 center-align">
+        		<a href="http://www.lumaki.co" target="_blank" class="social-link"><i class="fa fa-eye fa-3x"></i></a>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 center-align">
+        		<p>
+        			Lumaki meaning "To Grow" in Tagalog is a company I launched in November of 2015. This company is the name behind any large projects either personal or for my clients. Website dev, app design and graphic design are the main services offered by Lumaki.
+        		</p>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12">
+        		<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal modal-fullscreen fade" id="modal-asona" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="center-align">Web Development • ASONA Ltd.</h2>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 center-align">
+        		<img class="modal-image" src="img/asona-screen.png">
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12 center-align">
+        		<h3>Development In Progress</h3>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 center-align">
+        		<p>
+        			This is a website I'm currently developing for ASONA Ltd. a leading distributer of high-end high quality speakers. Expected completion is the end of June.
+        		</p>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12">
+        		<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MOdal home ease -->
+<div class="modal modal-fullscreen fade" id="modal-homeease" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="center-align">App Development • HomeEase</h2>
+        <!-- <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 center-align">
+        		<img class="modal-image" src="img/asona-screen.png">
+        	</div>
+        </div> -->
+        <div class="row">
+        	<div class="col-xs-12 center-align">
+        		<h3>Development In Progress</h3>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 center-align">
+        		<p>
+        			This app is set to begin final release stages mid June and allows users to request lawn care and snow removal with a tap of a button. This will not only benefit home owners with busy schedules but also those who are physically unable to do these jobs. Workers can use the app to find available jobs near them and update their customers of their progress. This app will be available on Android and iOS.
+        		</p>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12">
+        		<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MOdal coupz -->
+<div class="modal modal-fullscreen fade" id="modal-coupz" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="center-align">App Development • COUPZ</h2>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 center-align">
+        		<img class="modal-image" src="img/coupz-screen2.png">
+        	</div>
+        </div>
+        <hr>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 center-align">
+        		<img class="modal-image" src="img/coupz-screen1.png">
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12 center-align">
+        		<h3>Development In Progress</h3>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 center-align">
+        		<p>
+        			This app is set to begin final release stages early June and allows users to save money on local businesses. Coupz removes the need for current paper coupons and offers businesses a more affordable, versitile and convient way to market their business.
+        		</p>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12">
+        		<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MOdal grim jim -->
+<div class="modal modal-fullscreen fade" id="modal-grimjim" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="center-align">App Development • Grim Jim</h2>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-8 col-sm-offset-2 center-align">
+        		<img class="modal-image" src="img/grimjim-screen.png">
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12 center-align">
+        		<a href="https://play.google.com/store/apps/details?id=ca.mylaurier.baen9140.squareGame&hl=en" target="_blank" class="social-link"><i class="fa fa-android fa-3x"></i></a>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 center-align">
+        		<p>
+        			Following the Flappy Bird craze I created this app for fun. The app is a simple vertical scrolling game with swipe gestures. Availabe on Android.
+        		</p>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12">
+        		<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- MOdal graphic design -->
+<div class="modal modal-fullscreen fade" id="modal-graphicdesign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="center-align">Graphic Design</h2>
+        <div class="row">
+        	<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 center-align">
+        		<p>
+        			The following designs were made using Adobe Illustrator and or Photoshop
+        		</p>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 center-align">
+        		<img class="modal-image" src="img/lumaki-logo.png">
+        		<h4>Logo for Lumaki</h4>
+        	</div>
+        	<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 center-align">
+        		<img class="modal-image" src="img/coupz-logo.png">
+        		<h4>Logo for COUPZ</h4>
+        	</div>
+        	<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 center-align">
+        		<img class="modal-image" src="img/rice_logo.png">
+        		<h4>Logo for rice distrubution company</h4>
+        	</div>
+        	<div class="col-xs-8 col-xs-offset-2 col-sm-3 col-sm-offset-0 center-align">
+        		<img class="modal-image" src="img/sticker-frites.png">
+        		<h4>Sticker design for the Waterloo ON, restaurant Frites FWB maketing campain</h4>
+        	</div>
+        </div>
+        <div class="row">
+        	<div class="col-xs-12">
+        		<button type="button" class="close" data-dismiss="modal"><i class="fa fa-times fa-2x" aria-hidden="true"></i></button>
+        	</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+	<body data-spy="scroll" data-target="#header-nav" data-offset="51">
+		<nav id="header-nav" class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed"  style="margin-top:3px;margin-bottom:0px;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <i class="glyphicon glyphicon-ice-lolly-tasted" style="font-size: 20px;color:#fff;"></i>
+		      </button>
+		      <a id="nav-name" class="navbar-brand font-cursive" href="index.html">Tomas Baena</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a class="nav-link font-mont" href="#services">SERVICES</a></li>
+		        <li><a class="nav-link font-mont" href="#portfolio">PORTFOLIO</a></li>
+		        <li><a class="nav-link font-mont" href="#about">ABOUT</a></li>
+		        <li><a class="nav-link font-mont" href="#contact">CONTACT</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+  		<!-- <img id="home-img-full" src="img/bg.jpg"> -->
+  		<div id="home-img-full" class="mid font-mont-thick">
+		  <h2><b>hello</b></h2>
+		</div>
+		<div id="services" class="container-fluid">
+			<div class="row">
+				<h1 class="section-header font-mont">SERVICES</h1>
+				<div class="col-md-4 center-align">
+					<span class="fa-stack service-icon">
+					  <i class="fa fa-circle fa-stack-2x orange-font"></i>
+					  <i class="fa fa-file-code-o fa-inverse fa-stack-1x"></i>
+					</span>
+					<h3 class="section-header font-mont">Web Development</h3>
+					<p>
+					A great website is essential to any project or business. At the heart of all exceptional websites is a clean design with attention to detail and user experience in mind. I'm constantly looking at current design trends, styles and colour combinations to find what looks best. In terms of functionality I try to use the most recent available techniques and frameworks to ensure an up-to-date experience.
+					</p>
+
+				</div>
+				<div class="col-md-4 center-align">
+					<span class="fa-stack service-icon">
+					  <i class="fa fa-circle fa-stack-2x orange-font"></i>
+					  <i class="fa fa-mobile fa-inverse fa-stack-1x"></i>
+					</span>
+					<h3 class="section-header font-mont">Mobile App Development</h3>
+					<p>
+					The use of mobile apps has exploded in recent years offering functionality not available in desktop computers or laptops. This has paved the way for a revolution in the tech industry and I believe the potential of apps will only continue to grow as new functionality is added and our reliance on smart phones increases. I develop my apps using a web based approach allowing myself to code once and release to iOS and Android users. I use the most current and widely accepted frameworks just as Apache Cordova, AngularJS and Ionic to build apps that function great and look amazing.  
+					</p>
+				</div>
+				<div class="col-md-4 center-align">
+					<span class="fa-stack service-icon">
+					  <i class="fa fa-circle fa-stack-2x orange-font"></i>
+					  <i class="fa fa-picture-o fa-inverse fa-stack-1x"></i>
+					</span>
+					<h3 class="section-header font-mont">Graphic Design</h3>
+					<p>
+					When creating a logo or graphic the goal is simple, explain the product, brand or business in a beautiful way to the viewer so they instantly understand the message. Graphic design is constanty changing and new more trendy styles and techniques are constantly being created. I'm always taking note of design styles and techniques I see that leave me thinking "wow that's beautiful" or "wow that makes sense" or "wow that looks so clean". Using industry standard Adobe products such as Illustrator and Photoshop I try my best to convey these messages in all graphics I make. 
+					</p>
+				</div>
+			</div>
+		</div>
 		
-		
-	</div>
-	<h1 class="header-style">Education</h1>
-	<div class="row row4">
-	 	<img class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-1 col-md-3" src="img/laurier.png">
-		<p class="col-xs-10 col-xs-offset-1 col-sm-offset-1 col-sm-5">4th Year Computer Science Student at Wilfrid Laurier University
-		</p>
-	</div>
-	<h1 class="header-style">Qualifications</h1>
-	<div class="row row4">
-		<p class="col-xs-12 col-xs-offset-3 col-sm-3 col-sm-offset-1 p-header"><strong><u>Intermediate Understanding</u></strong></p>
-		<ul class="col-xs-12 col-xs-offset-4 col-sm-4 col-sm-offset-1" style="text-align:left;">
-		  <li>Java</li>
-		  <li>Python</li>
-		  <li>C</li>
-		  <li>HTML5</li>
-		  <li>JavaScript</li>
-		  <li>CSS3</li>
-		  <li>AngularJs</li>
-		  <li>VHDL</li>
-		  <li>Ionic Framework</li>
-		  <li>Parse Framework</li>
-		  <li>Quartus</li>
-		</ul>
-		<p class="col-xs-12 col-xs-offset-4 col-sm-3 col-sm-offset-1 p-header"><strong><u>Practical Use</u></strong></p>
-		<ul class="col-xs-12 col-xs-offset-4 col-sm-4 col-sm-offset-1" style="text-align:left;">
-		  <li>LUA</li>
-		  <li>Visual Basic</li>
-		  <li>x86 Assembly</li>
-		  <li>Git</li>
-		  <li>Bootstrap</li>
-		  <li>JQuery</li>
-		</ul>
-	</div>
-	<h1 class="header-style">Links</h1>
-	<div class="row row5">
-			<a class="col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-2" href="https://ca.linkedin.com/in/tomasbaena" target="_blank"><img src="img/linkedin.png"></a>
-			<a class="col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-1" href="https://github.com/TomasBaena" target="_blank"><img src="img/github.png"></a>
-			<a class="col-xs-4 col-xs-offset-4 col-sm-2 col-sm-offset-1" href="Tomas-Baena-CV.pdf" target="_blank"><img src="img/cv.png"></a>
-	</div>
-	<p id="footer">Copyright Tomas Baena 2016</p>
-</body>
+		<div id="portfolio" class="container-fluid">
+			<div class="row center-align">
+				<h1 class="section-header font-mont">PORTFOLIO</h1>
+
+				<div id="effect-5" class="effects clearfix">
+					<div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-4 col-lg-3 center-align">
+					    <div class="img">
+					        <img class="portfolio-img" src="img/lumaki-logo.png" alt="">
+					        <div class="overlay">
+					            <a href="#modal-lumaki" data-toggle="modal" data-target="#modal-lumaki" class="expand"><i class="fa fa-eye"></i></a>
+					        </div>
+					    </div>
+					</div>
+					<div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-4 col-lg-3 center-align">
+					    <div class="img">
+					        <img class="portfolio-img" src="img/asona-logo.png" alt="">
+					        <div class="overlay">
+					            <a href="#modal-asona" data-toggle="modal" data-target="#modal-asona" class="expand"><i class="fa fa-eye"></i></a>
+					            <!-- <a class="close-overlay hidden">x</a> -->
+					        </div>
+					    </div>
+					</div>
+					<div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-4 col-lg-3 center-align">
+					    <div class="img">
+					        <img class="portfolio-img" src="img/homeease-logo.png" alt="">
+					        <div class="overlay">
+					            <a href="#modal-homeease" data-toggle="modal" data-target="#modal-homeease" class="expand"><i class="fa fa-eye"></i></a>
+					        </div>
+					    </div>
+					</div>
+					<div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-4 col-lg-3 center-align">
+					    <div class="img">
+					        <img class="portfolio-img" src="img/coupz-logo.png" alt="">
+					        <div class="overlay">
+					            <a href="#modal-coupz" data-toggle="modal" data-target="#modal-coupz" class="expand"><i class="fa fa-eye"></i></a>
+					            <!-- <a class="close-overlay hidden">x</a> -->
+					        </div>
+					    </div>
+					</div>
+					<div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-4 col-lg-3 center-align">
+					    <div class="img">
+					        <img class="portfolio-img" src="img/grim-jim.jpg" alt="">
+					        <div class="overlay">
+					            <a href="#modal-grimjim" data-toggle="modal" data-target="#modal-grimjim" class="expand"><i class="fa fa-eye"></i></a>
+					        </div>
+					    </div>
+					</div>
+					<div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0 col-md-4 col-lg-3 center-align">
+					    <div class="img">
+					        <img class="portfolio-img" src="img/graphic-logo.png" alt="">
+					        <div class="overlay">
+					            <a href="#modal-graphicdesign" data-toggle="modal" data-target="#modal-graphicdesign" class="expand"><i class="fa fa-eye"></i></a>
+					            <!-- <a class="close-overlay hidden">x</a> -->
+					        </div>
+					    </div>
+					</div>
+				
+				</div>
+<!-- 				<figure class="tint">
+					<a href=""><img class="portfolio-img" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97350&w=350&h=350"></a>
+				</figure> -->
+
+
+			</div>
+		</div>
+		<div id="about" class="container-fluid">
+			<div class="row">
+				<h1 class="section-header font-mont">ABOUT</h1>
+			</div>
+			<div class="row" style="margin-bottom:40px;">
+				<div class="col-xs-12 col-xs-offset-0 col-sm-2 col-sm-offset-1 center-align">
+					 <i class="fa fa-graduation-cap orange-font" style="font-size:10vw;"></i>   
+				</div>
+				<div class="col-xs-12 col-xs-offset-0 col-sm-7 col-sm-offset-0 align-left" style="padding-top:0px;">
+					  <h3>4th Year Student at Wilfrid Laurier University</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-xs-offset-0 col-sm-2 col-sm-offset-1 center-align">
+					 <i class="fa fa-laptop orange-font" style="font-size:10vw;"></i>   
+				</div>
+				<div class="col-xs-12 col-xs-offset-0 col-sm-7 col-sm-offset-0 align-left">
+					  <h3>HTML5 • CSS3 • JavaScript • Java • Python • C • VHDL • AngularJS • Quartus • LUA • Visual Basic • x86 Assembly • Bootstrap • JQuery • WordPress • Ionic Framework • Parse JavaScript SDK • Parse Server • Git • Adobe Photoshop • Adobe Illustrator</h3>
+				</div>
+			</div>
+
+		</div>
+		<div id="contact" class="container-fluid">
+			<div class="row">
+				<h1 class="section-header font-mont" style="color:#fff;">CONTACT ME</h1>
+			</div>
+			<div class="row col-xs-12" style="padding-top: 50px;"">
+			    <form role="form" id="contactForm" data-toggle="validator" class="shake">
+			        <div class="row">
+			        	<div class="col-sm-6">
+				            <div class="form-group contact-input">
+				                <input type="text" class="form-control" id="name" placeholder="Full Name" required >
+				                <div class="help-block with-errors"></div>
+				            </div>
+				            <div class="form-group">
+				                <input type="email" class="form-control" id="email" placeholder="Contact Email" required>
+				                <div class="help-block with-errors"></div>
+				            </div>
+				        </div>
+				        <div class="col-sm-6">
+					        <div class="form-group">
+					            <textarea id="message" class="form-control" rows="5" placeholder="Message" required></textarea>
+					            <div class="help-block with-errors"></div>
+				        	</div>
+				        </div>
+			        </div>
+			 		<div class="row center-align">
+				        <button type="submit" id="form-submit" class="btn btn-success btn-lg col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4">Submit</button>
+				        <div id="msgSubmit" class="h3 text-center hidden"></div>
+				        <div class="clearfix"></div>
+				    </div>
+			    </form>
+			</div>
+		</div>
+		<div id="footer" class="container-fluid">
+			<div class="row">
+				<div class="col-md-4 center-align" style="padding-top:30px;">
+					<p class="font-mont" style="color:#262626;">Copyright © Tomas Baena 2016</h1>
+				</div>
+				<div class="col-md-4 center-align" style="padding-top:20px;">
+					<a href="https://github.com/TomasBaena" target="_blank" class="social-link"><i class="fa fa-github fa-3x"></i></a>
+					<a href="https://ca.linkedin.com/in/tomasbaena" target="_blank" class="social-link"><i class="fa fa-linkedin fa-3x"></i></a>
+					<a href="https://www.instagram.com/tomasbaena/" target="_blank" class="social-link"><i class="fa fa-instagram fa-3x"></i></a>
+					<!-- <a href="" class="social-link"><i class="fa fa-paperclip fa-3x"></i></a> -->
+				</div>
+			</div>
+		</div>
+	</body>
 
 </html>
+
