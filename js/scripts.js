@@ -1,4 +1,4 @@
-//script
+//nav
 $(window).scroll(function() {
   if ($(document).scrollTop() > 80) {
     $('nav').addClass('shrink');
@@ -17,6 +17,7 @@ $(window).scroll(function() {
   }
 });
 
+//portfolio
 $(document).ready(function(){
     if (Modernizr.touch) {
         // show the close overlay button
@@ -45,7 +46,14 @@ $(document).ready(function(){
             $(this).removeClass("hover");
         });
     }
-
+$(".modal-fullscreen").on('show.bs.modal', function () {
+  setTimeout( function() {
+    $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+  }, 0);
+});
+$(".modal-fullscreen").on('hidden.bs.modal', function () {
+  $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+});
 
 // Contact Form
 
@@ -53,7 +61,7 @@ $("#contactForm").validator().on("submit", function (event) {
     if (event.isDefaultPrevented()) {
         // handle the invalid form...
         formError();
-        submitMSG(false, "Did you fill in the form properly?");
+        submitMSG(false, "Please check your input");
     } else {
         // everything looks good!
         event.preventDefault();
