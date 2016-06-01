@@ -75,14 +75,11 @@ function submitForm(){
     var name = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
-    alert("test");
-
     $.ajax({
         type: "POST",
         url: "php/contact-form.php",
         data: "name=" + name + "&email=" + email + "&message=" + message,
         success : function(text){
-        	alert(text);
             if (text == "success"){
                 formSuccess();
             } else {
