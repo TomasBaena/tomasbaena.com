@@ -80,7 +80,7 @@ function submitForm(){
         url: "php/contact-form.php",
         data: "name=" + name + "&email=" + email + "&message=" + message,
         success : function(text){
-            if (text == "success"){
+            if (text == true){
                 formSuccess();
             } else {
                 formError();
