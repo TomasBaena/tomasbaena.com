@@ -76,8 +76,8 @@ nav.navbar.shrink {
 #home-img-full {
     background: 
     linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
     ),
     url("bg.jpg");
     background-size: cover;
@@ -97,6 +97,17 @@ nav.navbar.shrink {
   position: absolute;
   top: 50%;
   font-size: 10vw;
+  transform: translate(0%, -50%);
+}
+.mid h3 {
+    width: 100%;
+  text-align:center;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  top: 70%;
+  font-size: 7vw;
   transform: translate(0%, -50%);
 }
 /*
