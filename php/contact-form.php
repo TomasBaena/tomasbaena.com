@@ -4,6 +4,10 @@
     $message=$_POST['message'];         
     $from="From: $name<$email>\r\nReturn-path: $email"; 
     $subject="Message sent using your contact form"; 
-    mail("lumakiapps@gmail.com", $subject, $message, $from);  
-    echo 'success';
+    if (mail("lumakiapps@gmail.com", $subject, $message, $from)){
+    	echo 'success';
+    }else{
+    	echo 'error';
+    }
+    
 ?>
